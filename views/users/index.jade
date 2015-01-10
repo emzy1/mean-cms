@@ -1,0 +1,7 @@
+h2 Users
+
+.collection
+  a.collection-item(
+    ng-repeat="user in users"
+    href="users/{{ user._id }}"
+  ) {{ user.name }}

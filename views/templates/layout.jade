@@ -1,0 +1,46 @@
+doctype html
+html
+
+  head
+    title= title
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+
+    link(rel="stylesheet" type="text/css" href="/vendor/materialize/dist/css/materialize.min.css")
+    != css("layout")
+
+    script(src="/vendor/jquery/dist/jquery.min.js")
+    script(src="/vendor/materialize/dist/js/materialize.min.js")
+
+  body
+
+    header.blue-grey.darken-1
+      .container.white-text
+        br
+        h3 Welcome
+        p Enjoy your stay!
+        br
+
+    section!= content
+
+
+    footer
+      .container
+        .row
+          .col.l6.s12
+            h5.white-text Footer Content
+            p.grey-text.text-lighten-4 You can use rows and columns here to organize your footer content.
+          .col.l4.offset-l2.s12
+            h5.white-text Links
+            li
+              a.grey-text.text-lighten-3(href='#!') Link 1
+            li
+              a.grey-text.text-lighten-3(href='#!') Link 2
+            li
+              a.grey-text.text-lighten-3(href='#!') Link 3
+            li
+              a.grey-text.text-lighten-3(href='#!') Link 4
+
+      .footer-copyright
+        .container
+          | &copy; 2014 Copyright Text
+          a.grey-text.text-lighten-4.right(href='#!') More Links

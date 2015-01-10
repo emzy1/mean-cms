@@ -1,0 +1,49 @@
+form(name="pageForm" novalidate)
+
+  .row
+    .input-field.col.s5
+      input(
+        type="text"
+        ng-model="page.meta.title"
+        required
+      )
+      label(
+        ng-class="{active:page.meta.title}"
+      ) Title
+
+    .input-field.col.s5
+      input(
+        type="text"
+        ng-model="page.path"
+        required
+      )
+      label(
+        ng-class="{active:page.path}"
+      ) Path
+
+    .col.s2
+      input.btn.waves-effect.waves-light(
+        type="submit"
+        ng-click="save(page)"
+        ng-disabled="pageForm.$invalid || !pageForm.$dirty"
+      )
+
+  .row
+    .input-field.col.s12
+      label(
+        ng-class="{active:page.meta.description}"
+      ) Description
+      textarea.materialize-textarea(
+        ng-model="page.meta.description"
+        maxlength="160"
+      )
+
+  .row
+    .input-field.col.s6
+      label(
+        ng-class="{active:page.content}"
+      ) Content
+      textarea.materialize-textarea.browser-default(ng-model="page.content")
+    .row
+      .col.s6
+        .preview(ng-bind-html="page.content | unsafe")

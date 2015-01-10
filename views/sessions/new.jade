@@ -1,0 +1,23 @@
+h1 Sign in
+
+form(name="newSessionForm" role="form" novalidate)
+
+  label Email
+  input(
+    type="email"
+    ng-model="user.email"
+    required
+  )
+
+  label Password
+  input(
+    type="password"
+    ng-model="user.password"
+    required
+  )
+
+  input.btn.waves-effect.waves-light(
+    type="submit"
+    ng-click="save(user)"
+    ng-disabled="newSessionForm.$invalid"
+  )

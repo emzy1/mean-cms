@@ -1,0 +1,30 @@
+doctype html
+html(ng-app="meanCMS")
+  head
+    title= title
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+
+    link(rel="stylesheet" type="text/css" href="/vendor/materialize/dist/css/materialize.min.css")
+    != css("admin")
+
+    script(src="/vendor/jquery/dist/jquery.min.js")
+    script(src="/vendor/angular/angular.min.js")
+    script(src="/vendor/angular-resource/angular-resource.min.js")
+    script(src="/vendor/angular-route/angular-route.min.js")
+    script(src="/vendor/angular-sanitize/angular-sanitize.min.js")
+    script(src="/vendor/materialize/dist/js/materialize.min.js")
+
+    != js("app")
+
+    base(href="/admin/#/")
+
+  body
+
+    nav
+      .nav-wrapper
+        ul#nav-mobile.right.side-nav
+          li
+            a(href="pages") Pages
+
+
+    section.container(ng-view)

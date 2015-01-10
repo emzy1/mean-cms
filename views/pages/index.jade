@@ -1,0 +1,14 @@
+h2 Pages
+
+ul.collection
+  li.collection-item(ng-repeat="page in pages")
+    span {{ page.meta.title }}
+
+    //- these are float:right; so the order will be reversed
+    a.secondary-content(
+      href="{{page.path}}"
+      target="_blank"
+    ) view
+    a.secondary-content(
+      href="pages/{{ page._id }}/edit"
+    ) edit
